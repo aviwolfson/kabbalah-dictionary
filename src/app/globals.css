@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+html { direction: rtl; }
+body {
+  font-family: "Frank Ruhl Libre", serif;
+  background: #f5f0e8;
+  color: #2c1810;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #e8dcc8; }
+::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 3px; }
+
+.tree-item {
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.tree-item:hover { background: #e8dcc8; }
+.tree-item.active { background: #d4c4a8; font-weight: 700; }
+
+blockquote {
+  border-right: 3px solid #c9a84c;
+  padding-right: 12px;
+  font-style: italic;
+  color: #5c3d2e;
+}
