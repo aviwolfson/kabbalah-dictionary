@@ -246,10 +246,7 @@ export default function Home() {
                 return (
                   <div key={cat} className="mb-1">
                     <button
-                      onClick={() => {
-                        toggleCat(cat)
-                        if (subs.length === 0) setView("list")
-                      }}
+			onClick={() => { toggleCat(cat); setView("list") }}
                       className="tree-item w-full text-right px-4 py-3 rounded text-base font-bold flex items-center justify-between"
                     >
                       <span>{cat}</span>
@@ -312,11 +309,7 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs font-bold text-gold">הגדרה {i + 1}</span>
                     
-                      href={def.source_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs text-ink-light hover:text-gold underline underline-offset-2"
-                    >{def.source} {"↗"}</a>
+			<a href={def.source_url} target="_blank" rel="noopener noreferrer" className="text-xs text-ink-light hover:text-gold underline underline-offset-2">{def.source} {"↗"}</a>
                   </div>
                   <p className="text-sm leading-relaxed text-ink">{def.text}</p>
                   {def.quote && (
